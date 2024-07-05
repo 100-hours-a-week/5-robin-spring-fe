@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../mycss.css" rel="stylesheet" />
+    <link href="../common.css" rel="stylesheet" />
+    <script src="../javascript/userEdit.js" defer></script>
+  </head>
+
+  <body>
+    <article class="wrap">
+      <article class="wrap" id="header"></article>
+      <hr class="horizontal-rule" />
+
+      <div class="board">
+        <form method="post" id="member_Form">
+          <input type="hidden" name="user_id" id="user_id" />
+          <input type="hidden" name="profilePath" id="profilePath"/>
+          <input type="hidden" name="email" id="email" />
+          <h2 style="text-align: center; margin-top: 15%">회원정보수정</h2>
+          <p style="margin-left: 50px">프로필사진*</p>
+          <div class="overlay-wrap">
+            <div class="overlay">
+              <input
+                id="profile-upload-input"
+                type="file"
+                style="display: none"
+                name="profile-upload-img"
+                onchange="checkProfile()"
+              />
+              <button type="button" id="img-input" onclick="imgInput()">
+                변경
+              </button>
+            </div>
+            <input type="hidden" id="check_img" name="check_img" value="0" />
+            <img
+              id="preview"
+              src="#"
+              alt="preview"
+              style="
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                display: none;
+              "
+            />
+            <img
+              id="noprofile_img"
+              src="/images/스크린샷 2024-04-04 오후 4.38.05.png"
+              class="profile-img"
+            />
+          </div>
+          <div class="write-form">
+            <p>이메일</p>
+            <p id="userEmail"></p>
+            <p>닉네임</p>
+            <input
+              id="nickname"
+              type="text"
+              name="nickname"
+              class="form-control"
+            />
+            <p class="helper" id="helper-nickname">*닉네임을 입력해주세요.</p>
+            <button class="send-btn mlp30" style="width: 80%">
+              <p>수정하기</p>
+            </button>
+          </div>
+          <label for="member-del" onclick="modalView('member-del')">
+            <div class="center-box" id="member-del">
+              <p>회원 탈퇴</p>
+            </div>
+          </label>
+          <div class="center-box">
+            <button
+              class="write-btn toast-message"
+              style="margin-left: 0"
+              id="member-btn"
+            >
+              <p>수정완료</p>
+            </button>
+          </div>
+        </form>
+        <div class="modal hidden" id="modal_member-del">
+          <div class="modal_overlay"></div>
+          <div class="modal_content">
+            <h2>회원탈퇴 하시겠습니까?</h2>
+            <h4>작성된 게시글과 댓글은 삭제됩니다.</h4>
+            <button
+              style="
+                background-color: black;
+                width: 100px;
+                height: 50px;
+                border-radius: 10px;
+                border: 0;
+              "
+            >
+              <p style="color: white">취소</p>
+            </button>
+            <button
+              style="
+                background-color: #aca0eb;
+                width: 100px;
+                height: 50px;
+                border-radius: 10px;
+                border: 0;
+              "
+              onclick="delUser()"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <script></script>
+  </body>
+</html>

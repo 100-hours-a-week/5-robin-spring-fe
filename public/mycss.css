@@ -1,0 +1,330 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header {
+  width: 45%;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left {
+  height: 100%;
+  width: 50px;
+  display: block;
+  position: relative;
+}
+.header-left .line-1 {
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: rotate(0.15turn);
+}
+.header-left .line-2 {
+  display: block;
+  width: 5px;
+  height: 30px;
+  background-color: #000;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: rotate(-0.15turn);
+}
+.header-right {
+  width: 32px;
+  height: 32px;
+}
+
+.header-right-overlay {
+  position: relative;
+  width: 100px;
+}
+.header-right-overlay:hover .header-right-board {
+  display: block;
+}
+.header-right-board {
+  display: none;
+  width: 100%;
+  height: 110px;
+  background-color: #e9e9e9;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  margin-right: 65px;
+}
+.header-right-board p {
+  font-size: 15px;
+}
+
+.board {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.board-title {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+.board-cont {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+.board-line {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: grey;
+  margin: 30px auto 50px;
+}
+.center-box {
+  display: flex;
+  justify-content: center;
+}
+.write-form {
+  padding: 10px;
+  border: 0;
+  margin-left: 40px;
+}
+.form-control {
+  width: 90%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.form-control2 {
+  width: 90%;
+  height: 50px;
+  border: none;
+  background: none;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.form-control2-textarea {
+  width: 90%;
+  height: 200px;
+  border: none;
+  background: none;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.horizontal-rule {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #100f0f;
+  margin: 30px auto 50px;
+}
+.helper {
+  margin-top: 4px;
+  color: red;
+}
+.send-btn {
+  width: 90%;
+  background-color: #aca0eb;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+.send-btn p {
+  color: white;
+  transform: rotate(0.03deg);
+}
+/* signin.html */
+.profile {
+  width: 100%;
+}
+.profile p {
+  display: flex;
+  justify-content: flex-start;
+}
+.profile div .picture {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  border-radius: 50%;
+  background-color: #c6c6c6;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.overlay-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.overlay-wrap:hover .overlay {
+  opacity: 1;
+}
+
+.write-btn {
+  margin-left: 80%;
+  width: 120px;
+  height: 40px;
+  background-color: #aca0eb;
+  border-radius: 40px;
+  border: 0px;
+}
+.write-btn:hover {
+  background-color: #7f6aee;
+}
+.write-btn p {
+  color: white;
+}
+
+.toast-message {
+  opacity: 0;
+  bottom: -100px;
+  transition: all 0.5s;
+}
+.toast-active {
+  opacity: 100%;
+  bottom: 0px;
+}
+/* list.html */
+.content {
+  border-radius: 10px;
+  border: 0px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+.content line {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #100f0f;
+  margin: 10px auto 10px;
+}
+.content .date {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* view.html */
+
+.view-file {
+  width: 100%;
+  height: 300px;
+}
+.view-container-btn {
+  font-size: 16px;
+  width: 100px;
+  height: 60px;
+  background-color: rgb(207, 203, 203);
+  border-radius: 10px;
+  border: 0px solid;
+  margin-left: 10px;
+}
+.view-writer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.view-writer .sub {
+  align-items: center;
+}
+.edit-btn {
+  width: 50px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.content-reply {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
+.content-reply textarea {
+  width: 100%;
+  height: 130px;
+  border: 0;
+}
+.content-reply .line {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background: rgb(197, 195, 195);
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 30%;
+  height: 40px;
+}
+.paging-btn {
+  width: 10%;
+  height: 100%;
+  margin-right: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.modal_content {
+  position: relative; /* 고정 위치로 설정합니다. */
+  padding: 50px 100px;
+  text-align: center;
+  background-color: white;
+  width: 18%;
+  top: 0px;
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}

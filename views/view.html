@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../mycss.css" rel="stylesheet" />
+    <link href="../common.css" rel="stylesheet" />
+    <script src="../javascript/view.js" defer></script>
+  </head>
+  <body>
+    <section class="wrap">
+      <article class="wrap" id="header"></article>
+
+      <hr class="horizontal-rule" />
+
+      <div class="board">
+        <div class="board-title" id="view-post">
+          <!-- fetch append-->
+        </div>
+        <hr class="board-line" />
+        <div class="content-reply">
+          <textarea
+            id="textarea-input"
+            placeholder="댓글을 입력해주세요"
+          ></textarea>
+          <hr class="line" />
+          <button
+            class="write-btn"
+            id="comment-btn"
+            onclick="send_comment()"
+            style="display: block"
+          >
+            <p>댓글등록</p>
+          </button>
+          <button class="write-btn" id="edit-comment-btn" style="display: none">
+            <p>댓글수정</p>
+          </button>
+        </div>
+
+        <div class="board-title">
+          <div id="view-comment">
+            <!-- comments append -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../../mycss.css" rel="stylesheet" />
+    <link href="../../common.css" rel="stylesheet" />
+    <script src="../../javascript/userPwd.js" defer></script>
+  </head>
+  <body>
+    <article class="wrap">
+      <article class="wrap" id="header">
+        <!-- header fetch -->
+      </article>
+      <hr class="horizontal-rule" />
+      <div class="board">
+        <h3 style="text-align: center">비밀번호 수정</h3>
+        <div class="write-form">
+          <form name="edit_Form" id="edit_Form">
+            <input type="hidden" name="user_id" id="user_id" />
+            <p>비밀번호</p>
+            <input
+              id="password"
+              type="password"
+              class="form-control"
+              title="비밀번호을 입력하세요."
+              placeholder="비밀번호을 입력하세요."
+              name="password"
+            />
+            <p class="helper" id="helper_pwd">*비밀번호를 입력해주세요.</p>
+            <p>비밀번호 확인</p>
+            <input
+              id="password_chk"
+              type="password"
+              class="form-control"
+              title="비밀번호를 입력하세요."
+              placeholder="비밀번호를 한번 더 입력하세요."
+              name="password_chk"
+            />
+            <p class="helper" id="helper_pwd_chk">
+              *비밀번호를 한번더 입력해주세요.
+            </p>
+            <button
+              type="button"
+              class="send-btn"
+              id="member-btn"
+              onclick="edit_send()"
+            >
+              <p>수정하기</p>
+            </button>
+          </form>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
